@@ -1,11 +1,22 @@
-﻿/*Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+﻿/*Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
-3 -> 1, 8, 27
-5 -> 1, 8, 27, 64, 125*/
+A (3,6,8); B (2,1,-7), -> 15.84
 
-int n; 
-Console.Write($"Введите число: "); 
-int.TryParse(Console.ReadLine()!, out n);
+A (7,-5, 0); B (1,-1,9) -> 11.53*/
 
-for(int i = 1; i <= n; i++)
-Console.Write($"{i * i * i} ");
+int xa, xb, ya, yb,za, zb; 
+Console.Write($"Введите координату Х точки A: "); 
+int.TryParse(Console.ReadLine()!, out xa);
+Console.Write($"Введите координату Y точки a: "); 
+int.TryParse(Console.ReadLine()!, out ya);
+Console.Write($"Введите координату Z точки a: "); 
+int.TryParse(Console.ReadLine()!, out za);
+Console.Write($"Введите координату X точки B: "); 
+int.TryParse(Console.ReadLine()!, out xb);
+Console.Write($"Введите координату Y точки B: "); 
+int.TryParse(Console.ReadLine()!, out yb);
+Console.Write($"Введите координату z точки B: "); 
+int.TryParse(Console.ReadLine()!, out zb);
+
+double ans = Math.Sqrt((xa - xb) * (xa - xb) + (ya - yb) * (ya - yb) + (za - zb) * (za - zb));
+Console.Write($"расстояние между точками а И В = {Math.Round(ans, 2)}"); 
